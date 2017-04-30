@@ -24,11 +24,11 @@ trait ModuleTrait
     protected function getModule()
     {
         if ($this->_module == null) {
-            $this->_module = \Yii::$app->getModule('attachments');
+            $this->_module = \Yii::$app->getModule('media');
         }
 
         if (!$this->_module) {
-            throw new \Exception("Yii2 attachment module not found, may be you didn't add it to your config?");
+            throw new \Exception("Yii2 media module not found, may be you didn't add it to your config?");
         }
 
         return $this->_module;

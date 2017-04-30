@@ -3,8 +3,8 @@
 namespace sampa\media\components;
 
 use kartik\file\FileInput;
-use nemmo\attachments\models\UploadForm;
-use nemmo\attachments\ModuleTrait;
+use sampa\media\models\UploadForm;
+use sampa\media\ModuleTrait;
 use yii\base\InvalidConfigException;
 use yii\bootstrap\Widget;
 use yii\helpers\FileHelper;

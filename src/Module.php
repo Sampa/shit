@@ -2,7 +2,7 @@
 
 namespace sampa\media;
 
-use nemmo\attachments\models\File;
+use sampa\attachments\models\File;
 use yii\base\Exception;
 use yii\helpers\ArrayHelper;
 use yii\helpers\FileHelper;
@@ -10,7 +10,7 @@ use yii\i18n\PhpMessageSource;
 
 class Module extends \yii\base\Module
 {
-    public $controllerNamespace = 'nemmo\attachments\controllers';
+    public $controllerNamespace = 'sampa\media\controllers';
 
     public $storePath = '@app/uploads/store';
 
@@ -35,19 +35,19 @@ class Module extends \yii\base\Module
 
     public function registerTranslations()
     {
-        \Yii::$app->i18n->translations['nemmo/*'] = [
+        \Yii::$app->i18n->translations['sampa/*'] = [
             'class' => PhpMessageSource::className(),
             'sourceLanguage' => 'en',
-            'basePath' => '@vendor/nemmo/yii2-attachments/src/messages',
+            'basePath' => '@vendor/sampa/yii2-media/src/messages',
             'fileMap' => [
-                'nemmo/attachments' => 'attachments.php'
+                'sampa/media' => 'attachments.php'
             ],
         ];
     }
 
     public static function t($category, $message, $params = [], $language = null)
     {
-        return \Yii::t('nemmo/' . $category, $message, $params, $language);
+        return \Yii::t('sampa/' . $category, $message, $params, $language);
     }
 
     public function getStorePath()

@@ -1,8 +1,8 @@
 <?php
 namespace sampa\media\components;
 
-use nemmo\attachments\behaviors\FileBehavior;
-use nemmo\attachments\ModuleTrait;
+use sampa\media\behaviors\FileBehavior;
+use sampa\media\ModuleTrait;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\bootstrap\Widget;
