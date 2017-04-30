@@ -1,0 +1,43 @@
+{
+  "name": "nemmo/yii2-media",
+  "description": "Extension for file uploading and attaching to the models with functions for handling media",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "extension",
+    "attachment",
+    "file",
+    "upload"
+  ],
+  "license": "BSD-4-Clause",
+  "homepage": "https://github.com/Sampa/yii2-attachments",
+  "authors": [
+    {
+      "name": "Daniel van den Berg aka Sampa",
+      "email": "idrini@gmail.com",
+      "homepage": "https://github.com/sampa",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "yiisoft/yii2": "~2.0.0",
+    "kartik-v/yii2-widget-fileinput": "~1.0.0",
+    "2amigos/yii2-gallery-widget": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "phpunit/dbunit": "~1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "sampa\\attachments\\": "src"
+    }
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "npm-asset-library": "vendor/npm",
+      "bower-asset-library": "vendor/bower"
+    }
+  }
+}
