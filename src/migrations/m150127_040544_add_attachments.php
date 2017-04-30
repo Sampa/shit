@@ -1,6 +1,6 @@
 <?php
 
-namespace nemmo\attachments\migrations;
+namespace sampa\media\migrations;
 
 use yii\db\Migration;
 use yii\db\Schema;

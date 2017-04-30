@@ -1,6 +1,5 @@
 <?php
-
-namespace nemmo\attachments\components;
+namespace sampa\media\components;
 
 use nemmo\attachments\behaviors\FileBehavior;
 use nemmo\attachments\ModuleTrait;

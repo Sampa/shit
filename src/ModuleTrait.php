@@ -1,6 +1,7 @@
 <?php
 
-namespace nemmo\attachments;
+namespace sampa\media;
+
 
 /**
  * Created by PhpStorm.

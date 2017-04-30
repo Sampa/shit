@@ -1,6 +1,6 @@
 <?php
 
-namespace nemmo\attachments\controllers;
+namespace sampa\media\controllers;
 
 use nemmo\attachments\models\File;
 use nemmo\attachments\models\UploadForm;

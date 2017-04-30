@@ -1,6 +1,6 @@
 <?php
 
-namespace nemmo\attachments;
+namespace sampa\media;
 
 use nemmo\attachments\models\File;
 use yii\base\Exception;

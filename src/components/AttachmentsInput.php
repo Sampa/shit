@@ -1,6 +1,6 @@
 <?php
 
-namespace nemmo\attachments\components;
+namespace sampa\media\components;
 
 use kartik\file\FileInput;
 use nemmo\attachments\models\UploadForm;

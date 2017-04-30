@@ -1,6 +1,6 @@
 <?php
 
-namespace nemmo\attachments\components;
+namespace sampa\media\components;
 
 use himiklab\colorbox\Colorbox;
 use nemmo\attachments\behaviors\FileBehavior;

@@ -6,7 +6,7 @@
  * Time: 12:24
  */
 
-namespace nemmo\attachments\behaviors;
+namespace sampa\media\behaviors;
 
 use nemmo\attachments\models\File;
 use nemmo\attachments\ModuleTrait;
