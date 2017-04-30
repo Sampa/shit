@@ -1,8 +1,8 @@
 <?php
 
-namespace nemmo\attachments\models;
+namespace sampa\media\models;
 
-use nemmo\attachments\ModuleTrait;
+use sampa\media\ModuleTrait;
 use Yii;
 use yii\db\ActiveRecord;
 use yii\helpers\Url;
@@ -28,7 +28,7 @@ class File extends ActiveRecord
      */
     public static function tableName()
     {
-        return Yii::$app->getModule('attachments')->tableName;
+        return Yii::$app->getModule('media')->tableName;
     }
     
     /**
@@ -72,7 +72,7 @@ class File extends ActiveRecord
 
     public function getUrl()
     {
-        return Url::to(['/attachments/file/download', 'id' => $this->id]);
+        return Url::to(['/media/file/download', 'id' => $this->id]);
     }
 
     public function getPath()

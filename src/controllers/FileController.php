@@ -2,9 +2,9 @@
 
 namespace sampa\media\controllers;
 
-use nemmo\attachments\models\File;
-use nemmo\attachments\models\UploadForm;
-use nemmo\attachments\ModuleTrait;
+use sampa\media\models\File;
+use sampa\media\models\UploadForm;
+use sampa\media\ModuleTrait;
 use Yii;
 use yii\helpers\FileHelper;
 use yii\web\Controller;

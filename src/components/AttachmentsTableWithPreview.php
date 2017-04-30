@@ -3,8 +3,8 @@
 namespace sampa\media\components;
 
 use himiklab\colorbox\Colorbox;
-use nemmo\attachments\behaviors\FileBehavior;
-use nemmo\attachments\ModuleTrait;
+use sampa\media\behaviors\FileBehavior;
+use sampa\media\ModuleTrait;
 use Yii;
 use yii\bootstrap\Widget;
 use yii\data\ArrayDataProvider;
@@ -38,7 +38,7 @@ class AttachmentsTableWithPreview extends Widget
         if (!$this->model) {
             return Html::tag('div',
                 Html::tag('b',
-                    Yii::t('yii', 'Error')) . ': ' . $this->getModule()->t('attachments', 'The model cannot be empty.'
+                    Yii::t('yii', 'Error')) . ': ' . $this->getModule()->t('media', 'The model cannot be empty.'
                 ),
                 [
                     'class' => 'alert alert-danger'
@@ -56,7 +56,7 @@ class AttachmentsTableWithPreview extends Widget
         if (!$hasFileBehavior) {
             return Html::tag('div',
                 Html::tag('b',
-                    Yii::t('yii', 'Error')) . ': ' . $this->getModule()->t('attachments', 'The behavior FileBehavior has not been attached to the model.'
+                    Yii::t('yii', 'Error')) . ': ' . $this->getModule()->t('media', 'The behavior FileBehavior has not been attached to the model.'
                 ),
                 [
                     'class' => 'alert alert-danger'
@@ -93,7 +93,7 @@ JS;
                     'class' => 'yii\grid\SerialColumn'
                 ],
                 [
-                    'label' => $this->getModule()->t('attachments', 'File name'),
+                    'label' => $this->getModule()->t('media', 'File name'),
                     'format' => 'raw',
                     'value' => function ($model) {
                         return Html::a("$model->name.$model->type", $model->getUrl(), [
@@ -112,7 +112,7 @@ JS;
                                 [
                                     'class' => 'delete-button',
                                     'title' => Yii::t('yii', 'Delete'),
-                                    'data-url' => Url::to(['/attachments/file/delete', 'id' => $model->id])
+                                    'data-url' => Url::to(['/media/file/delete', 'id' => $model->id])
                                 ]
                             );
                         }
