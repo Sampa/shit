@@ -5,7 +5,7 @@
   "keywords": [
     "yii2",
     "extension",
-    "attachment",
+    "media",
     "file",
     "upload"
   ],
@@ -31,7 +31,7 @@
   },
   "autoload": {
     "psr-4": {
-      "sampa\\attachments\\": "src"
+      "sampa\\media\\": "src"
     }
   },
   "extra": {

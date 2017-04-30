@@ -2,7 +2,7 @@
 
 namespace sampa\media;
 
-use sampa\attachments\models\File;
+use sampa\media\models\File;
 use yii\base\Exception;
 use yii\helpers\ArrayHelper;
 use yii\helpers\FileHelper;
