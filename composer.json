@@ -1,5 +1,5 @@
 {
-  "name": "nemmo/yii2-media",
+  "name": "sampa/yii2-media",
   "description": "Extension for file uploading and attaching to the models with functions for handling media",
   "type": "yii2-extension",
   "keywords": [
