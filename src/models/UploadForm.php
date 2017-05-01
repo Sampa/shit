@@ -1,8 +1,8 @@
 <?php
 
-namespace nemmo\attachments\models;
+namespace sampa\media\models;
 
-use nemmo\attachments\ModuleTrait;
+use sampa\media\ModuleTrait;
 use yii\base\Model;
 use yii\helpers\ArrayHelper;
 use yii\web\UploadedFile;
