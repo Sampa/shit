@@ -16,6 +16,7 @@ use yii\helpers\FileHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\web\UploadedFile;
+use yii\helpers\Json;
 
 class FileBehavior extends Behavior
 {
@@ -58,12 +59,8 @@ class FileBehavior extends Behavior
         }
     }
 
-    /**
-     * @return File[]
-     * @throws \Exception
-     */
-    public function getFiles()
-    {
+    public function fileQuery(){
+
         $fileQuery = File::find()
             ->where([
                 'itemId' => $this->owner->id,
@@ -71,9 +68,64 @@ class FileBehavior extends Behavior
             ]);
         $fileQuery->orderBy(['id' => SORT_ASC]);
 
-        return $fileQuery->all();
+        return $fileQuery;
+    }
+    /**
+     * @return File[]
+     * @throws \Exception
+     */
+    public function getFiles()
+    {
+        return $this->fileQuery()->all();
+    }
+    /**
+     * @return File[] images only
+     * @throws \Exception
+     */
+    public function getImageFiles()
+    {
+
+        $fileQuery = $this->fileQuery();
+        $imageFiles = $fileQuery->andFilterWhere(['like', 'mime', 'image'])->all();
+
+        return $imageFiles;
     }
 
+    /**
+ * @return File[] images only in format useable for gallery widget by dosamigos
+ * @throws \Exception
+ */
+    public function getImageGalleryFiles()
+    {
+        $images = $this->getImageFiles();
+        $items = [];
+        foreach ($images as $image){
+            $items[] = [
+                'url' => $image->url,
+                'src' => $image->url, //thumbnail path
+                'options' => array('title' => $image->name)
+            ];
+        }
+        return $items;
+    }
+
+    /**
+     * @return File[] plain text only
+     * @throws \Exception
+     */
+    public function getTextFiles()
+    {
+        $fileQuery = $this->fileQuery();
+        $textFiles =  $fileQuery->andFilterWhere(['like', 'mime', 'text/plain'])->all();
+
+        return $textFiles;
+    }
+
+    public function getPdfFiles()
+    {
+        $fileQuery = $this->fileQuery();
+        $pdfFiles = $fileQuery->andFilterWhere(['like', 'mime', 'application/pdf'])->all();
+    }
     public function getInitialPreview()
     {
         $initialPreview = [];
